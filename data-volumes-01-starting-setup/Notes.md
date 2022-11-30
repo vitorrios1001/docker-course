@@ -99,3 +99,12 @@ $ docker run -v /path/to/code:/app/code
 
 $ docker run -v /path/to/code:/app/code:ro
 ```
+
+### Last used commands
+
+```docker shell
+$ docker build -t feedback-node:dev --build-arg DEFAULT_PORT=8000 .
+
+
+$ docker run -d -p 3000:8000 --env-file ./.env --rm --name feedback-app -v feedback-files:/app/feedback -v "/home/vitor/projects/private/docker-course/data-volumes-01-starting-setup:/app:ro" -v /app/temp -v /app/node_modules feedback-node:env
+```
